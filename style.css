@@ -1,0 +1,40 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: #57d2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#board{
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.square{
+    border-bottom: 5px solid black;
+    border-right: 5px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 95px;
+    cursor: pointer;
+    user-select: none;
+}
+.square:nth-child(3n){
+    border-right: none;
+}
+.square:nth-child(n+7){
+    border-bottom: none;
+}
+.square.highlight{
+    background-color: #f7b32c;
+}
+
